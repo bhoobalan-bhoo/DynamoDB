@@ -3,13 +3,13 @@ import boto3
 # Configure AWS credentials
 aws_access_key_id = "XXXXXXXXXXXXXXXXXXXXXXXXXXX"
 aws_secret_access_key = "XXXXXXXXXXXXXXXXXXXXXXXXXXX"
-region_name = "XXXXXXXXXXXXXXXXXXXXXXXXXXX"  # For example, "us-east-1"
+aws_region = "XXXXXXXXXXXXXXXXXXXXXXXXXXX"  # For example, "us-east-1"
 
 # Name of the table to delete data from
 table_name = 'XXXXXXXXXXXXXXXXXXXXXXXXXXX'
   
 # Initialize DynamoDB client
-dynamodb = boto3.client('dynamodb', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key, region_name=region_name)
+dynamodb = boto3.client('dynamodb', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key, region_name=aws_region)
 
 
 # Get the primary key attribute name(s) from the table's KeySchema
